@@ -1,0 +1,523 @@
+.App {
+  background-color: #040507;
+  text-align: center;
+  min-height: 100vh;
+}
+
+:root {
+  --gradient: linear-gradient(90deg, #6252ee, rgb(28, 0, 128), #ee6352);
+}
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+body {
+  background-color: #4f95ff;
+  height: 100vh;
+}
+
+.App-header {
+  background-color: #8d5d16;
+  height: 100%;
+}
+
+.liste {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 5px;
+  color: black;
+  margin: 40px;
+}
+
+.cardmovie {
+  margin-top: 50px;
+  margin-bottom: 20px;
+
+  display: flex;
+  justify-content: center;
+  margin-left: 50px;
+  color: rgb(177, 29, 29);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid none;
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  justify-content: space-around;
+  padding-top: 10px;
+  background-color: #f1faee;
+}
+
+.input {
+  width: 200px;
+}
+.filter input {
+  border-radius: 10px;
+  width: 190px;
+  height: 40px;
+}
+
+.modalbtn {
+  color: #f1faee;
+  background-color: #f1faee;
+  height: 40px;
+  width: 60px;
+}
+
+.titlee {
+  margin: 0 0 0.5em;
+  text-transform: uppercase;
+  font-weight: 1000;
+  font-size: 4rem;
+  color: #ee6352;
+  line-height: 0.8;
+  margin: 0;
+
+  background-image: var(--gradient);
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  background-size: 300%;
+  animation: bg-animation 5s infinite alternate;
+  margin-bottom: 5px;
+}
+
+.titlee:hover {
+  background-position: right;
+}
+
+#goback {
+  margin-top: 5px;
+}
+
+.titlee1 {
+  margin-right: 910px !important;
+  text-transform: uppercase;
+  font-weight: 1000;
+  font-size: 4rem;
+  color: #ee6352;
+  line-height: 0.8;
+
+  background-image: var(--gradient);
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  background-size: 300%;
+  animation: bg-animation 5s infinite alternate;
+  margin-bottom: 5px;
+}
+
+.titlee1:hover {
+  background-position: right;
+}
+
+.nav2 {
+  display: flex;
+  justify-content: end;
+  justify-content: space-between;
+  margin-right: -20px;
+  justify-content: center;
+  text-align: center;
+}
+
+.cardbodyy {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: black;
+  background-color: white;
+  padding: 1rem;
+  transform: translateY(102%);
+  transition: transform 0.5s ease-in-out;
+  max-height: 100%;
+  overflow: auto;
+}
+
+.cardmovie:hover .cardbodyy {
+  transform: translateY(0%);
+}
+
+.movieimage {
+  width: 100%;
+  height: 100%;
+  height: 50vh;
+  border-radius: 8px;
+  padding: 3px;
+  object-fit: cover;
+}
+
+.movieimage1 {
+  width: 25%;
+  height: 25%;
+  border-radius: 8px;
+  padding: 3px;
+  margin-top: 120px;
+  margin-left: 100px;
+  margin-right: -150px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+}
+
+.containertext {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  color: white;
+  margin-top: 10px;
+  width: 100%;
+  height: 100%;
+  margin-right: 200px;
+  margin-left: 202px;
+  text-align: left;
+}
+
+.titledescription {
+  align-items: center;
+  text-align: left !important;
+}
+
+.fun1 {
+  text-align: left;
+  color: white;
+  border: 0;
+  cursor: pointer;
+  padding: 0.5em 1.25em;
+  background: linear-gradient(90deg, #ee6352, purple, #ee6352);
+  background-size: 300%;
+  background-position: left;
+  transition: background-position 350ms;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+}
+
+.fun1:hover {
+  background-position: right;
+}
+
+.filter {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.fun {
+  color: white;
+  border: 0;
+  cursor: pointer;
+  padding: 0.5em 1.25em;
+  background: linear-gradient(90deg, #ee6352, purple, #ee6352);
+  background-size: 300%;
+  background-position: left;
+  transition: background-position 350ms;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  margin-right: 10px !important;
+}
+
+.fun:hover {
+  background-position: right;
+}
+
+.starscard {
+  display: flex;
+  justify-content: center;
+}
+
+.stars {
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+.inputt {
+  margin-left: 560px;
+  margin-top: 5px;
+}
+
+#addmovie {
+  width: 130px;
+  height: 40px;
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 1280px) {
+  .inputt {
+    margin-left: 300px;
+    margin-right: 20px;
+  }
+
+  .fun {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 1047px) {
+  .inputt {
+    margin-left: 280px;
+    margin-right: 10px;
+  }
+
+  .fun {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .inputt {
+    margin-left: 280px;
+    margin-right: 10px;
+  }
+
+  .fun {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 985px) {
+  .inputt {
+    margin-left: 250px;
+    margin-right: 20px;
+  }
+
+  .fun {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  .inputt {
+    margin-left: 200px;
+    margin-right: 20px;
+  }
+  .fun {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 945px) {
+  .inputt {
+    margin-left: 200px;
+    margin-right: 10px;
+  }
+
+  .fun {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 875px) {
+  .inputt {
+    margin-left: 150px;
+    margin-right: 20px;
+  }
+  .fun {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .inputt {
+    margin-left: 100px;
+    margin-right: 20px;
+  }
+  .fun {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .inputt {
+    margin-left: 60px;
+    margin-right: 5px;
+  }
+  .fun {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 766px) {
+  .inputt {
+    margin-left: 50px;
+    margin-right: 5px;
+  }
+  .fun {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .inputt {
+    margin-left: 30px;
+    margin-right: 2px;
+  }
+  .fun {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .inputt {
+    margin-left: 10px;
+    margin-right: 2px;
+  }
+  .fun {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .inputt {
+    margin-left: 5px;
+    margin-right: 2px;
+  }
+  .fun {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 695px) {
+  .inputt {
+    margin-left: 5px;
+    margin-right: 2px;
+  }
+  .fun {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .inputt {
+    margin-left: 10px;
+  }
+  .titlee {
+    display: none;
+  }
+  .fun {
+    margin-right: 5px;
+  }
+}
+
+@media screen and (max-width: 492px) {
+  .inputt {
+    margin-left: 1px;
+  }
+  .titlee {
+    display: none;
+  }
+  .fun {
+    margin-right: 5px;
+  }
+  .stars {
+    margin-left: 5px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .inputt {
+    margin-left: 1px;
+  }
+  .titlee {
+    display: none;
+  }
+  .fun {
+    margin-left: 5px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .inputt {
+    margin-left: 1px;
+  }
+  .titlee {
+    display: none;
+  }
+  .fun {
+    margin-left: 5px;
+  }
+}
+
+@media screen and (max-width: 436px) {
+  .inputt {
+    margin-left: 1px;
+  }
+  .titlee {
+    display: none;
+  }
+  .fun {
+    margin-left: 2px;
+  }
+  .stars {
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .inputt {
+    margin-left: 1px;
+  }
+  .titlee {
+    display: none;
+  }
+  .fun {
+    margin-left: 2px;
+  }
+  .stars {
+    margin-left: 3px;
+  }
+}
+
+@media screen and (max-width: 418px) {
+  .inputt {
+    margin-left: 1px;
+  }
+  .titlee {
+    display: none;
+  }
+  .fun {
+    margin-left: 1px;
+    margin-right: 1px;
+    width: 100px !important;
+  }
+  .stars {
+    margin-left: 2px;
+  }
+  * {
+    font-size: small;
+  }
+}
+
+@media screen and (max-width: 416px) {
+  .inputt {
+    margin-left: 1px;
+  }
+  .titlee {
+    display: none;
+  }
+  .fun {
+    width: 100px !important;
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+  .stars {
+    margin-left: 1px;
+  }
+  * {
+    font-size: small;
+  }
+}
